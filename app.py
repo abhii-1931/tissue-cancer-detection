@@ -11,7 +11,7 @@ from io import BytesIO
 app = Flask(__name__)
 
 # Load the pre-trained model using TensorFlow.js
-model = tf.keras.models.load_model("project/model.h5")
+model = tf.keras.models.load_model("model.h5")
 
 
 @app.route("/")
