@@ -54,6 +54,3 @@ def predict():
     output = "Cancer detected" if prediction > 0.5 else "No cancer detected"
     return render_template("index.html", result=result, percentage=prediction)
 
-
-if __name__ == "__main__":
-    app.run(debug=True)
