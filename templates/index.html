@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cancer Prediction</h1>
+
+        <!-- Container for Project Description -->
+        <div class="project-description-container">
+            <div class="description">
+                <p>
+                    identify metastatic cancer in small image patches taken from larger digital pathology scans.
+                    Metastatic cancer detection is a critical aspect of oncology, aiming to identify the spread of
+                    cancer cells from the primary site to other parts of the body. Early detection of metastasis is
+                    vital for effective treatment planning and improved patient outcomes. Innovative diagnostic
+                    techniques, including advanced imaging and molecular analyses, play a pivotal role in identifying
+                    and monitoring metastatic cancer, enabling healthcare professionals to tailor interventions and
+                    therapies for better disease management. Research continues to focus on developing precise and
+                    minimally invasive methods for timely detection, enhancing the prospects of successful treatment and
+                    patient survival.
+                </p>
+            </div>
+
+            <!-- Container for Sample Images -->
+            <div class="sample-images-container">
+                <h2>Sample Images</h2>
+                <img src="{{ url_for('static', filename='main.jpg') }} ">
+            </div>
+        </div>
+
+        <!-- Container for Form -->
+        <div class=" form-container">
+            <form action="/predict" method="post" enctype="multipart/form-data">
+                <!-- Hidden file input -->
+                <input type="file" name="image" id="image" accept="image/*" required style="display: none;">
+
+                <!-- Use the label to trigger the hidden file input -->
+                <label for="image" class="custom-file-upload">
+                    Choose Image
+                </label>
+
+                <button type="submit">Predict</button>
+            </form>
+
+            <!-- Display the prediction result and percentage only if result and percentage are not empty -->
+            {% if result and percentage %}
+            <div id="result" class="{{ 'red' if result == 'Cancer detected' else 'green' }}">
+                {{ result }}
+            </div>
+
+            <div id="percentage">
+                There is a {{ percentage }}% chance of having cancer.
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Styles for the hidden file input */
+input[type="file"] {
+    display: none;
+}
+
+/* Styles for the visible label */
+label.custom-file-upload {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    display: inline-block;
+    /* Ensure the label takes up space */
+}
+
+label.custom-file-upload:hover {
+    background-color: #2980b9;
+}
+
+button {
+    background-color: #27ae60;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #219653;
+}
+
+/* Styles for the result text */
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #e74c3c;
+    /* Default color for cancer detected */
+}
+
+/* Change color when cancer is not detected */
+#result.green {
+    color: #2ecc71;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    /* Increased max-width for better layout */
+    padding: 30px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.project-description-container {
+    margin-bottom: 30px;
+}
+
+.description {
+    text-align: left;
+}
+
+.sample-images-container {
+    margin-top: 20px;
+}
+
+.sample-images-container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+/*
+.sample-images-container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    Optional: Add border-radius for rounded corners
+} */
+
+.form-container {
+    margin-top: 30px;
+}
